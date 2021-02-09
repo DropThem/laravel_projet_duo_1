@@ -1,14 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <!DOCTYPE html>
-<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -44,7 +35,7 @@
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <h1 class="logo"><a href="index.html">Kakashi Template</a></h1>
+      <h1 class="logo"><a href="">Kakashi Template</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -53,16 +44,9 @@
     </div>
   </header><!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
-  @include('partials.home.sectionhome')
-
   <main id="main">
-
-    <!-- ======= About Section ======= -->
-    @include('partials.home.section2home')
-    <!-- End About Section -->
-
-</main><!-- End #main -->
+    @include('partials.article.sectionarticle')
+  </main><!-- End #main -->
 @include('partials.footer.footer')
 
 <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>

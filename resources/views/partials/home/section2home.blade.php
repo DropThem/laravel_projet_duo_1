@@ -6,6 +6,7 @@
           @foreach ($homes as $item)
           <h2>{{$item->title2}}</h2>
           <h3>{{$item->subtitle11}}</h3>
+          <img style="width: 500px;" src="{{$item->img}}" alt="">
           @endforeach
         </div>
 
