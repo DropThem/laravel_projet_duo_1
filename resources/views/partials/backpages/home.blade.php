@@ -40,12 +40,52 @@
       <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       @include('partials.backnav.backoffnav')
     </div>
-    <div>
-
-    <h1 style="margin-left: 600px;
-    margin-top: 300px;">Welcome Back Admin !</h1>
-    </div>
-      <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+    
+    <div class="">
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Subtitle</th>
+        <th scope="col">Subtitle2</th>
+        <th scope="col">Subtitle3</th>
+        <th scope="col">Title2</th>
+        <th scope="col">Subtitle22</th>
+        <th scope="col">Subtitle33</th>
+        <th scope="col">Subtitle44</th>
+        <th scope="col">Lorem</th>
+        <th scope="col">img</th>
+        <th scope="col">Show</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+        @foreach ($homes as $item)
+        <tr>
+          <th scope="row">{{$item->id}}</th>
+          <td>{{$item->title}}</td>
+          <td>{{$item->subtitle}}</td>
+          <td>{{$item->subtitle2}}</td>
+          <td>{{$item->subtitle3}}</td>
+          <td>{{$item->title2}}</td>
+          <td>{{$item->subtitle22}}</td>
+          <td>{{$item->subtitle33}}</td>
+          <td>{{$item->subtitle44}}</td>
+          <td>{{$item->lorem}}</td>
+          <td>{{$item->img}}</td>
+          <td>
+              <button type="button" class="btn btn-primary">Show</button>
+            </td>
+            <td>
+              <button type="button" class="btn btn-danger">Delete</button>
+          </td>
+        </tr>
+        @endforeach
+    </tbody>
+  </table>
+</div>
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
       <!-- Vendor JS Files -->
       <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>

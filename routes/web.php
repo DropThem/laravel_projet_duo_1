@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\BackhomeController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
+use App\Models\Home;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,3 +24,4 @@ Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::get('/back', function () {
     return view('back');
 });
+Route::get('/backhome', [BackhomeController::class, 'index'])->name('backhome');
