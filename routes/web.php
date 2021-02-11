@@ -1,9 +1,11 @@
 <?php
 
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\BackArticleController;
 use App\Http\Controllers\BackhomeController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
+use App\Models\BackArticle;
 use App\Models\Home;
 use Illuminate\Support\Facades\Route;
 
@@ -25,3 +27,7 @@ Route::get('/back', function () {
     return view('back');
 });
 Route::get('/backhome', [BackhomeController::class, 'index'])->name('backhome');
+Route::get('/backarticle', [BackArticleController::class, 'index'])->name('backarticle');
+Route::post('add-store', [BackArticleController::class, 'store']);
+Route::post('delete/{id}', [BackArticleController::class, 'destroy']);
+Route::get('backshow/{id}', [BackArticleController::class, 'show']);
