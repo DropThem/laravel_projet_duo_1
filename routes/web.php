@@ -19,3 +19,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/article', [ArticleController::class, 'index'])->name('article');
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+Route::get('/back', function () {
+    return view('back');
+});
